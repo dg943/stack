@@ -23,11 +23,11 @@ func (s *Stack[T]) String() string {
 	return string_s
 }
 
-func (s *Stack[T]) push(e ...T) {
+func (s *Stack[T]) Push(e ...T) {
 	s.arr = append(s.arr, e...)
 }
 
-func (s *Stack[T]) pop() (T, bool) {
+func (s *Stack[T]) Pop() (T, bool) {
 	if len(s.arr) < 1 {
 		var noop T
 		return noop, false
@@ -37,7 +37,7 @@ func (s *Stack[T]) pop() (T, bool) {
 	return top, true
 }
 
-func (s *Stack[T]) top() (T, bool) {
+func (s *Stack[T]) Top() (T, bool) {
 	if len(s.arr) < 1 {
 		var noop T
 		return noop, false
